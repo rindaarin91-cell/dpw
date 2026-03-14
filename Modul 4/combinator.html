@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combinator Selector</title>
+    <style>
+    
+        div p {
+            color: red;
+        }
+
+        div > p {
+            background-color: yellow;
+        }
+
+        div + p {
+            background-color: darkgray;
+        }
+
+        div ~ p {
+            color: rgb(149, 83, 142);
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+<p>Paragraf ini berwarna merah karena berada di dalam elemen div. Ini menunjukkan bahwa selector descendant (div p) akan memilih semua elemen p yang berada di dalam div.</p>
+
+<p>Paragraf ini juga merupakan anak langsung dari elemen div sehingga mendapatkan background kuning dari selector child (div > p).</p>
+</div>
+
+<p>Paragraf ini berada tepat setelah elemen div sehingga mendapatkan background abu-abu dari selector adjacent sibling (div + p).</p>
+
+<p>Paragraf ini merupakan saudara dari elemen div sehingga teksnya berubah menjadi warna cyan karena selector general sibling (div ~ p).</p>
+
+</body>
+</html>
+
+<p>Kesimpulan : engan menggunakan combinator selector, setiap paragraf bisa mendapatkan warna atau background yang berbeda tergantung apakah paragraf berada di dalam div, 
+    anak langsung div, tepat setelah div, atau berada setelah div sebagai saudara elemen</p>
