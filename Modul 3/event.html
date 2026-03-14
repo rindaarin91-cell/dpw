@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Halaman Event</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Arinda Mardianti">
+    <meta name="nim" content="253307007">
+
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #a4769c;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 800px) {
+
+            nav,
+            article {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        function klikGambar() {
+            alert("Gambar diklik!");
+        }
+
+        function perbesar(x) {
+            x.style.transform = "scale(1.2)";
+        }
+
+        function normal(x) {
+            x.style.transform = "scale(1)";
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h2> Mouse Event Arinda</h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Galeri dengan Mouse Event</h1>
+
+            <!-- onclick -->
+            <img src="gambar/gambar1.jpg" onclick="klikGambar()">
+
+            <!-- onmouseover & onmouseout -->
+            <img src="gambar/gambar2.jpg"
+                 onmouseover="perbesar(this)"
+                 onmouseout="normal(this)">
+
+            <img src="gambar/gambar3.jpg"
+                 onmouseover="perbesar(this)"
+                 onmouseout="normal(this)">
+
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Arinda Mardianti</p>
+    </footer>
+
+</body>
+
+</html>
