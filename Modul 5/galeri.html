@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gallery Flexbox Arinda</title>
+
+<style>
+
+body{
+    font-family: Arial;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img{
+    width: 70px;   /*karena nim saya 7, disini saya tambahkan 0 dibelakangnya agar gambar lebih terlihat*/
+    height: 70px;  
+    object-fit: cover;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Gallery Foto</h2>
+
+<div class="gallery">
+<img src="image cat/image1.jpg">
+<img src="image cat/image2.jpg">
+<img src="image cat/image3.jpg">
+<img src="image cat/image4.jpg">
+<img src="image cat/image5.jpg">
+<img src="image cat/image6.jpg">
+<img src="image cat/image7.jpg">
+<img src="image cat/image8.jpg">
+<img src="image cat/image9.jpg">
+<img src="image cat/image10.jpg">
+<img src="image cat/image11.jpg">
+<img src="image cat/image12.jpg">
+<img src="image cat/image13.jpg">
+<img src="image cat/image14.jpg">
+<img src="image cat/image15.jpg">
+<img src="image cat/image16.jpg">
+<img src="image cat/image17.jpg">
+<img src="image cat/image18.jpg">
+</div>
+
+<p>Penggunaan CSS Flexbox pada galeri foto mempermudah dalam mengatur tata letak gambar menjadi rapi dan fleksibel. Dengan properti flex-wrap, gambar dapat otomatis berpindah ke baris berikutnya ketika ruang tidak mencukupi.
+    Selain itu, penggunaan justify-content membantu mengatur posisi gambar agar berada di tengah, dan gap memberikan jarak antar gambar sehingga tampilan galeri menjadi lebih teratur dan menarik.
+</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grid Layout 2 - Skenario 1</title>
+
+<style>
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.grid-container div{
+    background-color: rgb(132, 86, 132);
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Grid Layout 2 - Skenario 1</h2>
+
+<div class="grid-container">
+<div class="item1">1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+</div>
+
+<p>
+Kesimpulan skenario 1 adalah: Property <b>grid-column-start</b> dan <b>grid-column-end</b> digunakan untuk mengatur posisi dan lebar elemen pada grid. Dengan pengaturan ini, elemen dapat menempati lebih dari satu kolom sehingga layout menjadi lebih fleksibel.
+</p>
+
+</body>
+</html>
