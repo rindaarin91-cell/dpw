@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jam Real-Time</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+            background: #f4f6f9;
+        }
+
+        .clock {
+            font-size: 30px;
+            font-weight: bold;
+            background: white;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Jam & Tanggal Real-Time ⏰</h2>
+
+    <div class="clock" id="jam"></div>
+
+    <script>
+        function updateJam() {
+            let sekarang = new Date();
+
+            let hari = sekarang.toLocaleDateString("id-ID", {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            let jam = sekarang.getHours().toString().padStart(2, '0');
+            let menit = sekarang.getMinutes().toString().padStart(2, '0');
+            let detik = sekarang.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById("jam").innerHTML =
+                hari + "<br>" + jam + ":" + menit + ":" + detik;
+        }
+
+        // Update setiap 1 detik
+        setInterval(updateJam, 1000);
+
+        // Jalankan pertama kali
+        updateJam();
+    </script>
+
+</body>
+
+</html>

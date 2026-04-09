@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Program Basic Dialog jQuery</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: 1px solid #000;
+            background: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Jendela Dialog Arinda</h2>
+    <p>Halaman ini akan otomatis menampilkan kotak dialog saat dimuat.</p>
+
+    <div id="dialogBasic" title="Informasi Penting">
+        <p>
+            Ini adalah jendela <strong>Basic Dialog</strong> yang dibuat menggunakan jQuery UI.
+            Anda dapat menggeser atau menutup jendela ini.
+        </p>
+    </div>
+
+    <button id="btnBuka">Buka Dialog Lagi</button>
+
+    <script>
+        $(function () {
+            $("#dialogBasic").dialog({
+                autoOpen: true,
+                show: { effect: "blind", duration: 500 },
+                hide: { effect: "explode", duration: 500 }
+            });
+
+            $("#btnBuka").on("click", function () {
+                $("#dialogBasic").dialog("open");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

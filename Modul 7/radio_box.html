@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pilih Musik Favorit</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Pilih Musik Favorit 🎵</h3>
+
+        <label><input type="radio" name="musik" value="Jazz"> Jazz</label>
+        <label><input type="radio" name="musik" value="Keroncong"> Keroncong</label>
+        <label><input type="radio" name="musik" value="Dangdut"> Dangdut</label>
+        <label><input type="radio" name="musik" value="Lainnya"> Lainnya</label>
+
+        <hr>
+
+        Info:
+        <input type="text" id="hasil" placeholder="Pilihan akan muncul di sini" readonly>
+    </div>
+
+    <script>
+        // Ambil semua radio button
+        const radios = document.querySelectorAll('input[name="musik"]');
+        const hasil = document.getElementById("hasil");
+
+        // Tambahkan event ke setiap radio
+        radios.forEach(radio => {
+            radio.addEventListener("change", function () {
+                hasil.value = this.value;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

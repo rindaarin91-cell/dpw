@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Program Javascript</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Halo silahkan mengisi nama mu !</h2>
+
+    <button onclick="tampilAlert()">Klik Aku</button>
+
+    <script>
+        function tampilAlert() {
+            let nama = prompt("Masukkan nama kamu:");
+
+            if (nama === "" || nama === null) {
+                alert("Kamu belum memasukkan nama!");
+            } else {
+                alert("Hallo, Aku " + nama + "!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

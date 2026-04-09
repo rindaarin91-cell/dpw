@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pemasukan Data</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #hasil {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Pemasukan Data</h2>
+    <button onclick="inputNama()">Masukkan Nama</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function inputNama() {
+            let nama = prompt("Siapa nama Anda?");
+
+            if (nama === null || nama.trim() === "") {
+                document.getElementById("hasil").innerHTML =
+                    "Anda belum memasukkan nama!";
+            } else {
+                document.getElementById("hasil").innerHTML =
+                    "Hai, " + nama + " 👋";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
